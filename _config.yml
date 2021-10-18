@@ -1,0 +1,17 @@
+# Example Site settings
+
+#google_analytics: UA-NNNNNNNN-N
+
+header_pages:
+  - blog.md
+  - about.md
+
+footer: 'me siga no <a href="https://www.linkedin.com/in/eualannascimento">linkedin</a>'
+
+style: dark
+#listen_for_clients_preferred_style: true # true or false (default)
+
+theme: jekyll-theme-console
+
+plugins:
+  - jekyll-seo-tag
