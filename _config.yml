@@ -5,6 +5,7 @@
 header_pages:
   - blog.md
   - about.md
+  - cv.md
 
 footer: 'me siga no <a href="https://www.linkedin.com/in/eualannascimento">linkedin</a>'
 
