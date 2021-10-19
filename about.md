@@ -4,7 +4,7 @@ layout: default
 permalink: /sobre
 ---
 
-# Alan Nascimento Batista Cordeiro
+# Alan Nascimento: Data Analyst
 
 # Skills:
 - Linguas: Português (Nativo) e Inglês;
