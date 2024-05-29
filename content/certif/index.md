@@ -1,6 +1,8 @@
 ---
 layout: certif
 title: certif*
+date: 2023-05-29
+ShowToc: true
 ---
 ---
 ### 📚 Cursos em Andamento
