@@ -10,7 +10,7 @@
       "linkedin": "eualannascimento",
       "avatar": "eualannascimento@gmail.com",
       "name": "Alan Nascimento",
-      "bio": "Data Analyst",
+      "bio": "Oi, vou usar esse site para centralizar meus texto de: bio, certif* (certificados), edg (every-day-gear), habilidades e blog posts.",
       "disableHLJS": true,
       "disablePostNavigation": true,
       "monoDarkIcon": false,
@@ -30,10 +30,16 @@
    "menu": {
       "main": [
         {
+          "name": "bio",
+          "pageRef": "/bio",  
+          "weight": 10
+        },
+        {
           "name": "certif*",
           "pageRef": "/certif",  
           "weight": 10
         }
+        
       ]
     }
 }
