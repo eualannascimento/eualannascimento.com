@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>eualannascimento</title>
-    <link>https://github.com/eualannascimento/eualannascimento.com/</link>
+    <link>https://eualannascimento.github.io/eualannascimento.com/</link>
     <description>Recent content on eualannascimento</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 29 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://github.com/eualannascimento/eualannascimento.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://eualannascimento.github.io/eualannascimento.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>001 - Apresentação</title>
-      <link>https://github.com/eualannascimento/eualannascimento.com/posts/001-apresentacao/</link>
+      <link>https://eualannascimento.github.io/eualannascimento.com/posts/001-apresentacao/</link>
       <pubDate>Wed, 29 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/eualannascimento/eualannascimento.com/posts/001-apresentacao/</guid>
+      <guid>https://eualannascimento.github.io/eualannascimento.com/posts/001-apresentacao/</guid>
       <description>Esse post tem o mesmo conteúdo da minha bio.
 Bem-vindo a minha bio. Sou um profissional versátil, com uma grande paixão (clichê) no âmbito profissional: gerar soluções!
 Apaixonado por tecnologia desde pequeno, busco resolver problemas de TI com qualquer ferramenta disponível, sem me limitar à minha stack atual ou minhas preferências (e considero desafiador).
@@ -21,10 +21,10 @@ Estou cursando uma Pós-Graduação em Engenharia de Dados pela PUC Minas, visan
     
     <item>
       <title>bio</title>
-      <link>https://github.com/eualannascimento/eualannascimento.com/bio/</link>
+      <link>https://eualannascimento.github.io/eualannascimento.com/bio/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/eualannascimento/eualannascimento.com/bio/</guid>
+      <guid>https://eualannascimento.github.io/eualannascimento.com/bio/</guid>
       <description>Bem-vindo a minha bio. Sou um profissional versátil, com uma grande paixão (clichê) no âmbito profissional: gerar soluções!
 Apaixonado por tecnologia desde pequeno, busco resolver problemas de TI com qualquer ferramenta disponível, sem me limitar à minha stack atual ou minhas preferências (e considero desafiador).
 Estou cursando uma Pós-Graduação em Engenharia de Dados pela PUC Minas, visando complementar minha formação de Tecnólogo em Análise e Desenvolvimento de Sistemas pela FATEC e Técnico em Desenvolvimento Web pela ETEC.</description>
@@ -32,10 +32,10 @@ Estou cursando uma Pós-Graduação em Engenharia de Dados pela PUC Minas, visan
     
     <item>
       <title>certif*</title>
-      <link>https://github.com/eualannascimento/eualannascimento.com/certif/</link>
+      <link>https://eualannascimento.github.io/eualannascimento.com/certif/</link>
       <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://github.com/eualannascimento/eualannascimento.com/certif/</guid>
+      <guid>https://eualannascimento.github.io/eualannascimento.com/certif/</guid>
       <description> 📚 Cursos em Andamento Início - Mai 2024: Jornada de Dados (Luciano Vasconcelos) - Workshops + Bootcamps (SQL e Python) Início - Abr 2024: 🎓 PUC Minas - Pós-Graduação em Engenharia de Dados 🔖 Certificações Conquistadas Jul 2020: CertiProf - SFPC Scrum Foundation Professional Certificate 📄 Jun 2019: APMG International - COBIT 5 Foundation 📄 📚 Cursos Concluídos Mai 2024: Jornada de Dados - Workshop 7: Estratégia Event Driven e Filas com Amazon SQS 📄 Mai 2024: Jornada de Dados - Workshop Aberto: Pipeline ETL com Python do Zero 📄 Mai 2024: Alura - Imersão Inteligência Artificial 2ª Edição 📄 Set 2022: Alura - Python e TDD: explorando testes unitários 📄 Jul 2021: Alura - Power BI Desktop: carregue, analise e visualize dados 📄 Fev 2021: Alura - Python: começando com a linguagem 📄 Fev 2021: Alura - Dashboard com Tableau: visualize e analise os seus dados 📄 Jan 2021: Alura - Git e GitHub: controle e compartilhe seu código 📄 Out 2020: Coursera - Crash Course on Python 📄 Out 2020: Alura - PowerShell parte 1: A linguagem de scripting moderna 📄 Set 2020: Alura - Modelagem de Banco de Dados: Entidades, Relacionamentos e Atributos 📄 Set 2020: Alura - HTML5 e CSS3 parte 4: Avançando no CSS 📄 Ago 2020: Alura - Personal Branding: entenda o que é e como você pode usá-la a favor da sua carreira 📄 Ago 2020: Alura - HTML5 e CSS3 parte 3: Trabalhando com formulários e tabelas 📄 Ago 2020: Alura - HTML5 e CSS3 parte 2: Posicionamento, listas e navegação 📄 Ago 2020: Alura - Currículo: como chamar a atenção dos entrevistadores 📄 Ago 2020: Conquer - Inteligência Financeira 📄 Jul 2020: Estabilis Academy - Agile Scrum Foundation 📄 Mai 2020: Alura - HTML5 e CSS3 parte 1: A primeira página da Web 📄 Abr 2020: Conquer - Inteligência Emocional 📄 Nov 2019: Alura - Fundamentos do Storytelling: Visão de negócios e desenvolvimento pessoal 📄 Out 2019: Caelum - Java Spring e Testes na Prática Ago 2019: Caelum - Java para Desenvolvimento Web Jul 2019: Caelum - Java e Orientação a Objetos Out 2018: Alura - Produtividade: hábitos e práticas para o dia a dia 📄 Set 2018: Trainning - BI e Big Data utilizando Power BI Ago 2018: 🎓 FATEC - Tecnólogo em Análise e Desenvolvimento de Sistemas Ago 2017: Caelum - Gerenciamento Ágil de Projetos de Software com Scrum Dez 2012: 🎓 ETEC - Técnico em Desenvolvimento Web Dez 2012: 🎓 ETEC - Ensino Médio </description>
     </item>
     
