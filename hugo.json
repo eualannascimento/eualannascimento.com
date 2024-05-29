@@ -1,0 +1,31 @@
+{
+   "theme": "paper",
+   "title": "eualannascimento",
+   "name": "eualannascimento",
+   "languageCode": "pt-br",
+   "baseURL": "https://eualannascimento.com/",
+   "params": {
+      "color": "linen",
+      "github": "eualannascimento",
+      "linkedin": "eualannascimento",
+      "avatar": "eualannascimento@gmail.com",
+      "name": "Alan Nascimento",
+      "bio": "Data Analyst",
+      "disableHLJS": true,
+      "disablePostNavigation": true,
+      "monoDarkIcon": false,
+      "math": true,
+      "localKatex": false,
+      "favicon": "favicon.ico",
+      "appleTouchIcon": "apple-touch-icon.png",
+      "tag":"tags",
+      "js_about": ["js/about.js"],
+      "css_about": ["css/about.css"]
+   },
+   "assets": {
+     "favicon16x16": "/assets/favicon-16x16.png",
+     "favicon32x32": "/assets/favicon-32x32.png",
+     "apple_touch_icon": "/assets/apple-touch-icon.png"
+   }
+}
+

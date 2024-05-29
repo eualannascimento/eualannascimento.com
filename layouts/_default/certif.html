@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<style>
+    .content {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6 {
+        text-align: center;
+    }
+
+    .content ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .content a {
+        text-decoration: none;
+    }
+</style>
+
+<div class="title">
+    <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
+    Página destinada a listar minhas certificações e meus cursos (com e sem certificado). </br>
+    Legenda: 🎓 - Formação acadêmica | 📄 - Imagem do certificado
+</div>
+
+<div class="content">
+    {{ .Content }}
+</div>
+
+{{ end }}
