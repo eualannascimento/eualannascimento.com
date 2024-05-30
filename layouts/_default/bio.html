@@ -1,47 +1,25 @@
 {{ define "main" }}
-
-<style>
-    .content {
-        font-size: 14px;
-    }
-
-    .title {
-        font-size: 14px;
-    }
-
-    .content h1,
-    .content h2,
-    .content h3,
-    .content h4,
-    .content h5,
-    .content h6 {
-        text-align: center;
-    }
-
-    .content ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    .content a {
-        text-decoration: none;
-    }
-
-    img[alt="me"] {
-        max-width: 250px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
-
-<div class="title">
-    <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
-    Página destinada a escrever um pouco da minha biografia profissional.
-</div>
-
-<div class="content">
-    {{ .Content }}
-</div>
-
+	<main>
+        <header>
+            <!-- Custom styles for this template -->
+            <link defer href="/css/bio.css" rel="stylesheet">
+        </header>   
+		<article>
+			<h1>{{ .Title }}</h1>
+			<div class="time">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+            Página destinada a escrever um pouco da minha biografia profissional.
+			<div>
+				{{ .Content }}
+			</div>
+			{{ with .Params.tags }}
+			<div>
+				<ul class="tags">
+					{{ range . }}
+					<a class=" text-white" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+					{{ end }}
+				</ul>
+			</div>
+			{{ end }}
+		</article>     
+	</main>
 {{ end }}

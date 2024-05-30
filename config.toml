@@ -1,0 +1,18 @@
+baseURL = 'https://eualannascimento.com/'
+languageCode = 'pt-br'
+title = 'Alan Nascimento'
+PygmentsCodeFences = true
+PygmentsStyle = "solarized-dark256"
+pluralizelisttitles = "false"
+paginate  = 18
+disableHugoGeneratorInject = true
+
+[assets]
+  favicon16x16 = "/assets/favicon-16x16.png"
+  favicon32x32 = "/assets/favicon-32x32.png"
+  apple_touch_icon = "/assets/apple-touch-icon.png"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
