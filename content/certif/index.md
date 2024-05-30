@@ -1,25 +1,25 @@
 ---
 layout: certif
 title: certif*
-date: 2023-05-29
+date: 2024-05-29
 ShowToc: true
 ---
 ---
-### 📚 Cursos em Andamento
+#### 📚 Cursos em Andamento
 
 - **Início - Mai 2024**: Jornada de Dados (Luciano Vasconcelos) - Workshops + Bootcamps (SQL e Python)
 - **Início - Abr 2024**: 🎓 PUC Minas - Pós-Graduação em Engenharia de Dados
 
 ---
 
-### 🔖 Certificações Conquistadas
+#### 🔖 Certificações Conquistadas
 
 - **Jul 2020**: CertiProf - SFPC Scrum Foundation Professional Certificate [📄](img/certification/2020.07-certiprof-sfpc_scrum_foundation_professional_certificate.png)
 - **Jun 2019**: APMG International - COBIT 5 Foundation [📄](img/certification/2019.07-apmg_international-cobit-5-foundation.png)
 
 ---
 
-### 📚 Cursos Concluídos
+#### 📚 Cursos Concluídos
 
 - **Mai 2024**: Jornada de Dados - Workshop 7: Estratégia Event Driven e Filas com Amazon SQS [📄](img/courses/2024.05-jornada_de_dados-workshop_7_estrategia_event_driven_e_filas_com_amazon_sqs.png)
 - **Mai 2024**: Jornada de Dados - Workshop Aberto: Pipeline ETL com Python do Zero [📄](img/courses/2024.05-jornada_de_dados-workshop_aberto_pipeline_etl_com_python_do_zero.png)

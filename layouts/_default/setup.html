@@ -1,0 +1,25 @@
+{{ define "main" }}
+	<main>
+        <header>
+            <!-- Custom styles for this template -->
+            <link defer href="/css/setup.css" rel="stylesheet">
+        </header>   
+		<article>
+			<h1>{{ .Title }}</h1>
+			<div class="time">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+			Espaço separado para listar meu setup e minha stack atuais.
+			<div class="content">
+				{{ .Content }}
+			</div>
+			{{ with .Params.tags }}
+			<div>
+				<ul class="tags">
+					{{ range . }}
+					<a class=" text-white" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+					{{ end }}
+				</ul>
+			</div>
+			{{ end }}
+		</article>     
+	</main>
+{{ end }}
