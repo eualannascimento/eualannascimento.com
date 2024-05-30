@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eualannascimento.com/posts/001-apresentacao/</loc>
-    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eualannascimento.com/tags/eualannascimento/</loc>
+    <loc>https://eualannascimento.com/blog/001-apresentacao/</loc>
     <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eualannascimento.com/</loc>
     <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://eualannascimento.com/posts/</loc>
+    <loc>https://eualannascimento.com/bio/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eualannascimento.com/blog/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eualannascimento.com/certif/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eualannascimento.com/tags/eualannascimento/</loc>
+    <lastmod>2024-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eualannascimento.com/setup/</loc>
     <lastmod>2024-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eualannascimento.com/tags/</loc>
     <lastmod>2024-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eualannascimento.com/bio/</loc>
-    <lastmod>2023-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://eualannascimento.com/certif/</loc>
-    <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://eualannascimento.com/categories/</loc>
   </url>
