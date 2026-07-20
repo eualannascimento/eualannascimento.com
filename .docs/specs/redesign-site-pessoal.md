@@ -1,6 +1,6 @@
 # Redesign do site pessoal (design + stack + dados)
 
-**Status:** Pronto para Commit
+**Status:** Concluído
 **Data:** 2026-07-20
 
 ## 1. Resumo e Objetivo
