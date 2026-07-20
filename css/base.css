@@ -199,6 +199,15 @@ header.site-header nav a.active { color: var(--color-accent-emphasis); }
 
 header.site-header nav .icon-link { font-size: 0.75rem; }
 
+/* LinkedIn e o destino que mais importa para quem recruta: ganha um contorno
+   proprio para se destacar dos links de navegacao interna. */
+header.site-header nav a.nav-link-highlight {
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent-emphasis);
+}
+header.site-header nav a.nav-link-highlight:hover { background: var(--color-accent-100); }
+
 .theme-toggle {
   background: transparent;
   border: 1px solid var(--color-border);
@@ -217,6 +226,15 @@ header.site-header nav .icon-link { font-size: 0.75rem; }
 .theme-toggle:hover { border-color: var(--color-accent); color: var(--color-accent-emphasis); }
 
 main { padding: var(--space-8) 0; }
+
+/* Entrada suave da pagina, igual ao cvfade da referencia. Respeita reduced-motion. */
+@keyframes site-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  main { animation: site-fade-in 0.4s ease; }
+}
 
 /* Cartao "blueprint": cantos tecnicos, sem sombra, radius zero. */
 .card {
@@ -309,6 +327,32 @@ main { padding: var(--space-8) 0; }
   margin: 0 0 var(--space-2);
 }
 
+/* Leitura rapida: experiencia + stack, para quem tem 10 segundos antes de decidir continuar. */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid var(--color-border);
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.tag-strong {
+  border-color: var(--color-accent);
+  color: var(--color-accent-emphasis);
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+}
+
 .nav-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -326,9 +370,9 @@ main { padding: var(--space-8) 0; }
   gap: var(--space-2);
   text-decoration: none;
   color: inherit;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform var(--transition);
 }
-.nav-card:hover { border-color: var(--color-accent); }
+.nav-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
 
 .nav-card-kicker {
   font-family: var(--font-heading);
