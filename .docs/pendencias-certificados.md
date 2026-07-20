@@ -7,4 +7,4 @@ Nenhuma pendência no momento: as 8 certificações novas trazidas do LinkedIn e
 ## Como usar
 Ao adicionar uma certificação/curso sem nenhuma evidência disponível, registre aqui:
 
-- [ ] Nome do curso/certificação — instituição — data — o que falta (print do certificado, link de verificação, etc.)
+- [ ] Nome do curso/certificação - instituição - data - o que falta (print do certificado, link de verificação, etc.)

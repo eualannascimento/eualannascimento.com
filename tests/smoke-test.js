@@ -159,7 +159,7 @@ assert(exists('CNAME') && read('CNAME').trim() === 'eualannascimento.com', 'CNAM
 
 // --- Estilo anti-IA: sem travessao ---
 console.log('\nTextos sem travessao:');
-const withDash = pages.filter((p) => /—|–/.test(read(p)));
+const withDash = pages.filter((p) => /\u2014|\u2013/.test(read(p)));
 assert(withDash.length === 0, `Nenhum travessao nas paginas HTML${withDash.length ? ' (falha: ' + withDash.join(', ') + ')' : ''}`);
 
 // --- Summary ---

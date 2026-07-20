@@ -3,6 +3,9 @@
 # meia-risca (U+2013) ou aspas curvas (U+201C/U+201D).
 # Apenas caracteres sao verificados aqui: sao deterministicos e sem falso
 # positivo. O vocabulario (E04/E05) continua como instrucao para a IA.
+# Excecoes: arquivos binarios (-I) e os specs baseline-*.md/architecture.md,
+# que a spec redesign-site-pessoal.md proibe reescrever (registro historico
+# do estado pre-redesign).
 name: style-gate
 on:
   push:
@@ -15,7 +18,11 @@ jobs:
       - name: Bloquear travessao, meia-risca e aspas curvas
         run: |
           pat=$(printf '\xe2\x80\x94|\xe2\x80\x93|\xe2\x80\x9c|\xe2\x80\x9d')
-          if grep -rnE "$pat" --exclude-dir=.git .; then
+          if grep -rnIE "$pat" \
+              --exclude-dir=.git \
+              --exclude='baseline-*.md' \
+              --exclude='architecture.md' \
+              .; then
             echo "Caracteres proibidos encontrados. Substitua por hifen e aspas retas (ver .rules/anti-ai-style.md, E01 e E02)."
             exit 1
           fi
