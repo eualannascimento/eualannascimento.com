@@ -13,7 +13,7 @@ const SiteRender = (function () {
 
   function renderEntry(item) {
     const parts = [];
-    if (item.badge) parts.push(escapeHtml(item.badge) + " ");
+    if (item.badge) parts.push('<span class="badge-chip">' + escapeHtml(item.badge) + "</span>");
     if (item.date) parts.push("<strong>" + escapeHtml(item.date) + "</strong>: ");
     parts.push(escapeHtml(item.text));
     if (item.evidence) {
