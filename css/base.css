@@ -64,6 +64,7 @@
   --color-accent-100: #eef6ff;
   --color-accent-700: #416180;
   --color-accent-900: #1d2d3d;
+  --color-accent-emphasis: var(--color-accent-700);
 
   --font-heading: "Barlow Condensed", system-ui, sans-serif;
   --font-heading-weight: 600;
@@ -83,19 +84,32 @@
   --shadow-sm: 0 1px 2px color-mix(in srgb, #2b2b2d 14%, transparent);
   --shadow-md: 0 3px 10px color-mix(in srgb, #2b2b2d 16%, transparent);
 
-  --max-width: 720px;
+  --max-width: 760px;
+  --transition: 0.15s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #16181a;
-    --color-surface: #1e2124;
-    --color-surface-2: #24272b;
-    --color-text: #f2f2f3;
-    --color-text-muted: #b7b7ba;
-    --color-divider: color-mix(in srgb, #f2f2f3 16%, transparent);
-    --color-accent-100: #1d2d3d;
-  }
+/* O projeto de referencia (project-classificavagas-page-resume) nao tem modo escuro:
+   o padrao aqui e sempre claro, igual a referencia. O escuro so existe se a pessoa
+   escolher manualmente pelo botao de tema (ver [data-theme] abaixo e js/theme-toggle.js). */
+:root[data-theme="dark"] {
+  --color-bg: #16181a;
+  --color-surface: #1e2124;
+  --color-surface-2: #24272b;
+  --color-text: #f2f2f3;
+  --color-text-muted: #b7b7ba;
+  --color-divider: color-mix(in srgb, #f2f2f3 16%, transparent);
+  --color-accent-100: #1d2d3d;
+  --color-accent-emphasis: var(--color-accent-2);
+}
+:root[data-theme="light"] {
+  --color-bg: #f2f2f3;
+  --color-surface: #e9e9ea;
+  --color-surface-2: #ffffff;
+  --color-text: #1d1f20;
+  --color-text-muted: #5d5d60;
+  --color-divider: color-mix(in srgb, #1d1f20 16%, transparent);
+  --color-accent-100: #eef6ff;
+  --color-accent-emphasis: var(--color-accent-700);
 }
 
 * , *::before, *::after { box-sizing: border-box; }
@@ -114,14 +128,26 @@ body {
 h1, h2, h3 {
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  line-height: 1.15;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   margin: 0 0 var(--space-3);
 }
 
-a { color: var(--color-accent-700); }
-@media (prefers-color-scheme: dark) {
-  a { color: var(--color-accent-2); }
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  text-transform: uppercase;
 }
+
+.home-title {
+  font-size: clamp(2.4rem, 6vw, 3.5rem);
+  line-height: 1.04;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 16ch;
+}
+
+a { color: var(--color-accent-emphasis); text-underline-offset: 3px; }
+a:hover { color: var(--color-accent); }
 
 .container {
   max-width: var(--max-width);
@@ -129,29 +155,26 @@ a { color: var(--color-accent-700); }
   padding: 0 var(--space-4);
 }
 
-header.site-header {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-}
-
+/* Header: barra simples sem fundo/borda, igual ao cv-nav da referencia. */
 header.site-header .bar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
   gap: var(--space-3);
   padding: var(--space-4) 0;
 }
 
 header.site-header .brand {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--color-text);
 }
 
 header.site-header nav {
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: var(--space-4);
@@ -159,47 +182,191 @@ header.site-header nav {
 
 header.site-header nav a {
   text-decoration: none;
-  color: var(--color-text);
-  font-weight: 500;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--transition);
 }
 
-header.site-header nav a:hover { color: var(--color-accent-700); }
+header.site-header nav a:hover,
+header.site-header nav a.active { color: var(--color-accent-emphasis); }
 
-header.site-header nav .icon-link { font-size: 1.1rem; display: inline-flex; }
+header.site-header nav .icon-link { font-size: 0.75rem; display: inline-flex; }
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  width: 26px;
+  height: 26px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), color var(--transition);
+}
+.theme-toggle:hover { border-color: var(--color-accent); color: var(--color-accent-emphasis); }
 
 main { padding: var(--space-8) 0; }
 
+/* Cartao "blueprint": cantos tecnicos, sem sombra, radius zero. */
 .card {
-  background: var(--color-surface-2);
+  position: relative;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border-radius: 0;
   padding: var(--space-6);
   margin-bottom: var(--space-6);
 }
 
+.corner {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  z-index: 2;
+}
+.corner.tl { top: -3px; left: -3px; }
+.corner.tr { top: -3px; right: -3px; }
+.corner.bl { bottom: -3px; left: -3px; }
+.corner.br { bottom: -3px; right: -3px; }
+
 .avatar {
-  width: 128px;
-  height: 128px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto var(--space-4);
+  flex: none;
   box-shadow: var(--shadow-md);
 }
 
-.home-hero { text-align: center; }
-.home-hero p { color: var(--color-text-muted); }
+/* Botoes: radius zero, peso 600, sem caixa-alta forcada (igual aos .btn da referencia). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  min-height: 38px;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+.btn-primary:hover { background: var(--color-accent-700); border-color: var(--color-accent-700); color: #fff; }
+.btn-outline { background: transparent; color: var(--color-accent-emphasis); border-color: var(--color-accent); }
+.btn-outline:hover { background: var(--color-accent-100); color: var(--color-accent-emphasis); }
+
+.home-hero {
+  padding: var(--space-8) 0 var(--space-6);
+}
+
+.home-intro {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.home-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  max-width: 56ch;
+  margin: var(--space-4) 0 0;
+  color: color-mix(in srgb, var(--color-text) 82%, transparent);
+}
+
+/* Eyebrow: badge em pilula, igual ao .home-eyebrow real da referencia. */
+.home-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-emphasis);
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
+  border-radius: 99px;
+  padding: 0.375rem 1rem;
+  margin: 0 0 var(--space-2);
+}
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.nav-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition);
+}
+.nav-card:hover { border-color: var(--color-accent); }
+
+.nav-card-kicker {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.nav-card-kicker-accent { color: var(--color-accent-emphasis); }
+
+.nav-card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0.125rem 0 0;
+}
+
+.nav-card-desc {
+  font-size: 0.90625rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  margin: 0;
+  flex: 1;
+}
+
+.nav-card .btn { margin-top: var(--space-2); align-self: flex-start; }
 
 .time { color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: var(--space-4); }
 
 .section-title {
+  display: block;
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   margin: var(--space-6) 0 var(--space-2);
-  color: var(--color-accent-700);
+  color: var(--color-accent-emphasis);
 }
+.section-title:first-of-type { margin-top: var(--space-2); }
 
 ul.plain { list-style: none; padding: 0; margin: 0; }
 ul.plain li {
@@ -208,15 +375,78 @@ ul.plain li {
 }
 ul.plain li:last-child { border-bottom: none; }
 
+/* Chip para o badge de evidencia (formacao, certificado, link de credencial). */
+.badge-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  font-size: 0.6875rem;
+  margin-right: var(--space-2);
+  flex: none;
+}
+
 .pending-badge {
   display: inline-block;
   font-size: 0.75rem;
   color: var(--color-text-muted);
 }
 
+/* Timeline numerada: usada quando o conteudo e realmente uma sequencia cronologica. */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline li {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.timeline li:last-child { border-bottom: none; }
+.timeline-index {
+  flex: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-accent-emphasis);
+  opacity: 0.55;
+  min-width: 2ch;
+}
+
+/* CTA discreto de referencia cruzada com a ferramenta de curriculo. */
+.resume-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+.resume-cta p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  max-width: 44ch;
+}
+
 footer.site-footer {
   text-align: center;
   padding: var(--space-6) 0;
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 620px) {
+  .nav-cards { grid-template-columns: 1fr; }
+  header.site-header nav { gap: var(--space-3); }
 }
