@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Certificações e cursos de Alan Nascimento: 4x Microsoft Certified (PL-300, PL-900, DP-900, AZ-900), Databricks, Notion e histórico completo de cursos concluídos desde 2012.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="certif | Alan Nascimento">
+<meta property="og:description" content="Certificações e cursos de Alan Nascimento: 4x Microsoft Certified, Databricks, Notion e mais.">
+<meta property="og:image" content="https://eualannascimento.com/img/avatar.png">
+<meta property="og:url" content="https://eualannascimento.com/certif.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://eualannascimento.com/certif.html">
+<link rel="icon" href="/img/avatar.png">
+<link href="/css/base.css" rel="stylesheet">
+<link href="/css/certif.css" rel="stylesheet">
+<title>certif* | Alan Nascimento</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="/">eualannascimento.com</a>
+    <nav>
+      <a href="/bio.html">bio</a>
+      <a href="/certif.html">certif</a>
+      <a href="/setup.html">setup</a>
+      <a class="icon-link" href="https://github.com/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+      <a class="icon-link" href="https://www.linkedin.com/in/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <h1>certif*</h1>
+      <p class="time">Atualizado em 20 de julho de 2026</p>
+      <p>Página destinada a listar minhas certificações e meus cursos (com e sem certificado).<br>
+      Legenda: 🎓 formação acadêmica | 📄 imagem do certificado | 🔗 link de verificação da credencial</p>
+
+      <h2 class="section-title">📚 Cursos em Andamento</h2>
+      <ul class="plain" id="lista-cursos-andamento"></ul>
+
+      <h2 class="section-title">🔖 Certificações Conquistadas</h2>
+      <ul class="plain" id="lista-certificacoes"></ul>
+
+      <h2 class="section-title">📚 Cursos Concluídos</h2>
+      <ul class="plain" id="lista-cursos-concluidos"></ul>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container">eualannascimento.com</div>
+</footer>
+<script src="/js/certif-data.js"></script>
+<script src="/js/render.js"></script>
+<script>
+  SiteRender.renderEntries("lista-cursos-andamento", CertifData.cursosAndamento);
+  SiteRender.renderEntries("lista-certificacoes", CertifData.certificacoes);
+  SiteRender.renderEntries("lista-cursos-concluidos", CertifData.cursosConcluidos);
+</script>
+</body>
+</html>

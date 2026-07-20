@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Setup de trabalho de Alan Nascimento: equipamentos e stack de software usados no dia a dia.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="setup | Alan Nascimento">
+<meta property="og:description" content="Equipamentos e stack de software usados no dia a dia por Alan Nascimento.">
+<meta property="og:image" content="https://eualannascimento.com/img/avatar.png">
+<meta property="og:url" content="https://eualannascimento.com/setup.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://eualannascimento.com/setup.html">
+<link rel="icon" href="/img/avatar.png">
+<link href="/css/base.css" rel="stylesheet">
+<title>setup | Alan Nascimento</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="/">eualannascimento.com</a>
+    <nav>
+      <a href="/bio.html">bio</a>
+      <a href="/certif.html">certif</a>
+      <a href="/setup.html">setup</a>
+      <a class="icon-link" href="https://github.com/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+      <a class="icon-link" href="https://www.linkedin.com/in/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <h1>setup</h1>
+      <p class="time">Espaço separado para listar meu setup e minha stack atuais.</p>
+
+      <h2 class="section-title">Setup</h2>
+      <ul class="plain" id="lista-hardware"></ul>
+
+      <h2 class="section-title">Stack</h2>
+      <ul class="plain" id="lista-stack"></ul>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container">eualannascimento.com</div>
+</footer>
+<script src="/js/setup-data.js"></script>
+<script src="/js/render.js"></script>
+<script>
+  SiteRender.renderPlainList("lista-hardware", SetupData.hardware);
+  SiteRender.renderPlainList("lista-stack", SetupData.stack);
+</script>
+</body>
+</html>
