@@ -8,11 +8,14 @@
 <meta property="og:title" content="Alan Nascimento">
 <meta property="og:description" content="Engenheiro de Dados no Bradesco, especialista em Power BI, Databricks e automação de dados.">
 <meta property="og:image" content="https://eualannascimento.com/img/avatar.png">
+<meta property="og:image:width" content="556">
+<meta property="og:image:height" content="556">
 <meta property="og:url" content="https://eualannascimento.com/">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://eualannascimento.com/">
 <link rel="icon" href="/img/avatar.png">
 <link href="/css/base.css" rel="stylesheet">
+<script>(function(){var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);})();</script>
 <title>Alan Nascimento</title>
 </head>
 <body>
@@ -25,18 +28,54 @@
       <a href="/setup.html">setup</a>
       <a class="icon-link" href="https://github.com/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
       <a class="icon-link" href="https://www.linkedin.com/in/eualannascimento" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Mudar tema">☾</button>
     </nav>
   </div>
 </header>
 <main>
   <div class="container home-hero">
-    <img class="avatar" src="/img/avatar.png" alt="Foto de Alan Nascimento">
-    <h1>Alan Nascimento</h1>
-    <p>Engenheiro de Dados no Bradesco | site pessoal e portfólio</p>
+    <div class="home-intro">
+      <img class="avatar" src="/img/avatar.png" alt="Foto de Alan Nascimento">
+      <div>
+        <p class="home-eyebrow">Site pessoal e portfólio</p>
+        <h1 class="home-title">Alan Nascimento</h1>
+      </div>
+    </div>
+    <p class="home-subtitle">Engenheiro de Dados no Bradesco, com trajetória em BI, automação e governança de dados.</p>
+
+    <div class="nav-cards">
+      <a class="nav-card" href="/bio.html">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span class="nav-card-kicker nav-card-kicker-accent">Trajetória</span>
+        <h2 class="nav-card-title">bio</h2>
+        <p class="nav-card-desc">De atendimento ao cliente a Engenheiro de Dados: os 10 anos de carreira no Bradesco.</p>
+        <span class="btn btn-primary">Ler a bio</span>
+      </a>
+      <a class="nav-card" href="/certif.html">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span class="nav-card-kicker">Formação</span>
+        <h2 class="nav-card-title">certif*</h2>
+        <p class="nav-card-desc">Certificações Microsoft, cursos concluídos e em andamento desde 2012.</p>
+        <span class="btn btn-outline">Ver certificações</span>
+      </a>
+      <a class="nav-card" href="/setup.html">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span class="nav-card-kicker">Bastidores</span>
+        <h2 class="nav-card-title">setup</h2>
+        <p class="nav-card-desc">Equipamentos e stack de software usados no dia a dia.</p>
+        <span class="btn btn-outline">Ver setup</span>
+      </a>
+    </div>
+
+    <div class="resume-cta">
+      <p>Também criei uma ferramenta gratuita para gerar currículo e guia de LinkedIn, sem cadastro e 100% no navegador.</p>
+      <a class="btn btn-outline" href="https://github.com/eualannascimento/project-classificavagas-page-resume" target="_blank" rel="noopener noreferrer">Ver o projeto ↗</a>
+    </div>
   </div>
 </main>
 <footer class="site-footer">
   <div class="container">eualannascimento.com</div>
 </footer>
+<script src="/js/theme-toggle.js"></script>
 </body>
 </html>
