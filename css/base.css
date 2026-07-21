@@ -181,6 +181,9 @@ header.site-header nav {
 }
 
 header.site-header nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) 0;
   text-decoration: none;
   color: color-mix(in srgb, var(--color-text) 75%, transparent);
   font-family: var(--font-heading);
@@ -194,14 +197,24 @@ header.site-header nav a {
 header.site-header nav a:hover,
 header.site-header nav a.active { color: var(--color-accent-emphasis); }
 
-header.site-header nav .icon-link { font-size: 0.75rem; display: inline-flex; }
+header.site-header nav .icon-link { font-size: 0.75rem; }
+
+/* LinkedIn e o destino que mais importa para quem recruta: ganha um contorno
+   proprio para se destacar dos links de navegacao interna. */
+header.site-header nav a.nav-link-highlight {
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent-emphasis);
+}
+header.site-header nav a.nav-link-highlight:hover { background: var(--color-accent-100); }
 
 .theme-toggle {
   background: transparent;
   border: 1px solid var(--color-border);
   color: var(--color-text);
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
+  flex: none;
   font-size: 0.8125rem;
   line-height: 1;
   cursor: pointer;
@@ -213,6 +226,15 @@ header.site-header nav .icon-link { font-size: 0.75rem; display: inline-flex; }
 .theme-toggle:hover { border-color: var(--color-accent); color: var(--color-accent-emphasis); }
 
 main { padding: var(--space-8) 0; }
+
+/* Entrada suave da pagina, igual ao cvfade da referencia. Respeita reduced-motion. */
+@keyframes site-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  main { animation: site-fade-in 0.4s ease; }
+}
 
 /* Cartao "blueprint": cantos tecnicos, sem sombra, radius zero. */
 .card {
@@ -305,6 +327,32 @@ main { padding: var(--space-8) 0; }
   margin: 0 0 var(--space-2);
 }
 
+/* Leitura rapida: experiencia + stack, para quem tem 10 segundos antes de decidir continuar. */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  padding: 0.3125rem 0.75rem;
+  border: 1px solid var(--color-border);
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.tag-strong {
+  border-color: var(--color-accent);
+  color: var(--color-accent-emphasis);
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+}
+
 .nav-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -322,9 +370,9 @@ main { padding: var(--space-8) 0; }
   gap: var(--space-2);
   text-decoration: none;
   color: inherit;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform var(--transition);
 }
-.nav-card:hover { border-color: var(--color-accent); }
+.nav-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
 
 .nav-card-kicker {
   font-family: var(--font-heading);
@@ -448,5 +496,24 @@ footer.site-footer {
 
 @media (max-width: 620px) {
   .nav-cards { grid-template-columns: 1fr; }
-  header.site-header nav { gap: var(--space-3); }
+
+  /* Header: duas linhas deliberadas (marca, depois nav) em vez de um wrap
+     organico que sobra encostado na borda direita. */
+  header.site-header .bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+  }
+  header.site-header nav {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: var(--space-2);
+    column-gap: var(--space-4);
+  }
+
+  /* Alvos de toque de pelo menos 44px, sem aumentar o peso visual do texto. */
+  .theme-toggle { width: 36px; height: 36px; margin-left: auto; }
+  .btn { min-height: 44px; }
 }
