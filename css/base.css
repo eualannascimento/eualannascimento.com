@@ -149,6 +149,13 @@ h1 {
 a { color: var(--color-accent-emphasis); text-underline-offset: 3px; }
 a:hover { color: var(--color-accent); }
 
+/* Foco de teclado consistente em todos os interativos (links, botoes, cartoes). */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -222,6 +229,12 @@ main { padding: var(--space-6) 0; }
 }
 @media (prefers-reduced-motion: no-preference) {
   main { animation: site-fade-in 0.4s ease; }
+}
+
+/* Sem deslocamentos/transicoes de movimento quando o usuario pede menos animacao. */
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.001ms !important; }
+  .nav-card:hover { transform: none; }
 }
 
 .card {
@@ -306,7 +319,7 @@ main { padding: var(--space-6) 0; }
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  color: color-mix(in srgb, var(--color-text) 68%, transparent);
 }
 .nav-card-kicker-accent { color: var(--color-accent-emphasis); }
 

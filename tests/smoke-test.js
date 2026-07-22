@@ -47,10 +47,16 @@ assert(baseCss.includes('--color-'), 'tokens de cor definidos em variaveis CSS')
 pages.forEach((page) => {
   const html = read(page);
   assert(html.includes('css/base.css'), `${page} referencia css/base.css`);
-  assert(/href="\/?bio\.html"/.test(html) && /href="\/?certif\.html"/.test(html) && /href="\/?setup\.html"/.test(html), `${page} tem navegacao para bio/certif/setup`);
-  assert(html.includes('github.com/eualannascimento') && html.includes('linkedin.com/in/eualannascimento'), `${page} tem links de GitHub e LinkedIn`);
-  assert(/href="https:\/\/github\.com\/eualannascimento"[^>]*target="_blank"/.test(html), `${page} abre link do GitHub em nova aba`);
+  assert(html.includes('<a class="brand" href="/">'), `${page} tem link de volta para a home (brand)`);
+  assert(html.includes('linkedin.com/in/eualannascimento'), `${page} tem link de LinkedIn`);
+  assert(/href="https:\/\/www\.linkedin\.com\/in\/eualannascimento"[^>]*target="_blank"/.test(html), `${page} abre o link do LinkedIn em nova aba`);
 });
+
+const homeHtml = read('index.html');
+assert(
+  /href="\/?bio\.html"/.test(homeHtml) && /href="\/?certif\.html"/.test(homeHtml) && /href="\/?setup\.html"/.test(homeHtml),
+  'index.html oferece navegacao para bio/certif/setup (nav-cards)'
+);
 
 // --- Regra 12: certif.html e setup.html consomem dados estruturados via JS ---
 console.log('\nDados estruturados (Regra 12):');
