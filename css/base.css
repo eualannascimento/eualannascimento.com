@@ -161,7 +161,8 @@ header.site-header .bar {
   flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-3);
-  padding: var(--space-4) 0;
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
 }
 
 header.site-header .brand {
@@ -293,7 +294,8 @@ main { padding: var(--space-8) 0; }
 .btn-outline:hover { background: var(--color-accent-100); color: var(--color-accent-emphasis); }
 
 .home-hero {
-  padding: var(--space-8) 0 var(--space-6);
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-6);
 }
 
 .home-intro {
@@ -503,7 +505,8 @@ footer.site-footer {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
-    padding: var(--space-3) 0;
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
   }
   header.site-header nav {
     margin-left: 0;
