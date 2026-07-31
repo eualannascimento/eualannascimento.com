@@ -31,3 +31,20 @@ Depois acesse `http://localhost:8000`.
 ```bash
 node tests/smoke-test.js
 ```
+
+
+## Qualidade
+
+Smoke test:
+
+```bash
+node tests/smoke-test.js
+```
+
+Verificações estáticas de acessibilidade:
+
+```bash
+node tests/accessibility-check.js
+```
+
+Para revisar links, responsividade e teclado, siga [`docs/QUALITY-CHECKLIST.md`](docs/QUALITY-CHECKLIST.md) em uma janela de navegador desktop e mobile.
